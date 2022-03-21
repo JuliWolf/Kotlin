@@ -242,3 +242,14 @@
 //        println("$greeting $itemToGreet")
 //    }
 //}
+
+
+/* -------------- Classes -------------- */
+
+fun main() {
+//    val person = Person("Nate", "Ebel")
+//    person.firstName
+//    person.lastName
+
+    val person = Person()
+}
