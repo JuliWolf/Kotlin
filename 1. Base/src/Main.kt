@@ -252,4 +252,8 @@ fun main() {
 //    person.lastName
 
     val person = Person()
+//    person.nickName = "Shades"
+//    person.nickName = "New Nickname"
+//    println(person.nickName)
+    person.printInfo()
 }
