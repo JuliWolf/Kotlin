@@ -91,7 +91,7 @@ interface IdProvider {
 //}
 
 
-/* -------------- Sealed classes -------------- */
+/* -------------- Sealed classes & Data classes -------------- */
 
 enum class EntityType {
     HELP, EASY, MEDIUM, HARD;
@@ -139,39 +139,63 @@ sealed class Entity () {
     data class Hard(val id: String, val name: String, val multiplier: Float): Entity()
 }
 
-fun main() {
-//    val entity:Entity = EntityFactory.create(EntityType.MEDIUM)
-//    val message = when(entity) {
-//        Entity.Help -> "help class"
-//        is Entity.Easy -> "easy class"
-//        is Entity.Hard -> "hard class"
-//        is Entity.Medium -> "medium class"
-//    }
+//fun main() {
+////    val entity:Entity = EntityFactory.create(EntityType.MEDIUM)
+////    val message = when(entity) {
+////        Entity.Help -> "help class"
+////        is Entity.Easy -> "easy class"
+////        is Entity.Hard -> "hard class"
+////        is Entity.Medium -> "medium class"
+////    }
+////
+////    println(message)
 //
-//    println(message)
-
+////    val entity1 = Entity.Easy("id", "name")
+////    val entity2 = Entity.Easy("id", "name")
+//
+////  --- we can copy and receive the save object
+////    val entity2 = entity1.copy()
+////  --- we can copy and change some values
+////    val entity2 = entity1.copy(name = "new name")
+//
+////  data classes comparing by data they have not by class hash
+////    if (entity1 == entity2) {
+////        println("they are equal")
+////    } else {
+////        println("they are not equal")
+////    }
+//
+////  --- deep equality comparing values and class hash
 //    val entity1 = Entity.Easy("id", "name")
-//    val entity2 = Entity.Easy("id", "name")
-
-//  --- we can copy and receive the save object
 //    val entity2 = entity1.copy()
-//  --- we can copy and change some values
-//    val entity2 = entity1.copy(name = "new name")
-
-//  data classes comparing by data they have not by class hash
-//    if (entity1 == entity2) {
+//
+//    if (entity1 === entity2) {
 //        println("they are equal")
 //    } else {
 //        println("they are not equal")
 //    }
+//}
 
-//  --- deep equality comparing values and class hash
+
+/* -------------- Extension Functions/Properties -------------- */
+
+// --- extend methods
+fun Entity.Medium.printInfo () {
+    println("Medium class: $id")
+}
+
+// --- extend property
+val Entity.Medium.info: String
+    get() = "some info"
+
+fun main() {
+    Entity.Medium("id", "name").printInfo()
+
     val entity1 = Entity.Easy("id", "name")
-    val entity2 = entity1.copy()
+    val entity2 = EntityFactory.create(EntityType.MEDIUM)
 
-    if (entity1 === entity2) {
-        println("they are equal")
-    } else {
-        println("they are not equal")
+    if (entity2 is Entity.Medium) {
+        entity2.printInfo()
+        entity2.info
     }
 }
