@@ -124,20 +124,54 @@ sealed class Entity () {
     object Help : Entity() {
         val name = "Help"
     }
-    data class Easy(val id: String, val name: String): Entity()
+//  --- data class can contain only values
+    data class Easy(val id: String, val name: String): Entity() {
+//    --- we also can override Object methods
+//        override fun equals(other: Any?): Boolean {
+//            return super.equals(other)
+//        }
+//
+//        override fun hashCode(): Int {
+//            return super.hashCode()
+//        }
+    }
     data class Medium(val id: String, val name: String): Entity()
     data class Hard(val id: String, val name: String, val multiplier: Float): Entity()
 }
 
 fun main() {
-    val entity:Entity = EntityFactory.create(EntityType.MEDIUM)
-    val message = when(entity) {
-        Entity.Help -> "help class"
-        is Entity.Easy -> "easy class"
-        is Entity.Hard -> "hard class"
-        is Entity.Medium -> "medium class"
+//    val entity:Entity = EntityFactory.create(EntityType.MEDIUM)
+//    val message = when(entity) {
+//        Entity.Help -> "help class"
+//        is Entity.Easy -> "easy class"
+//        is Entity.Hard -> "hard class"
+//        is Entity.Medium -> "medium class"
+//    }
+//
+//    println(message)
+
+//    val entity1 = Entity.Easy("id", "name")
+//    val entity2 = Entity.Easy("id", "name")
+
+//  --- we can copy and receive the save object
+//    val entity2 = entity1.copy()
+//  --- we can copy and change some values
+//    val entity2 = entity1.copy(name = "new name")
+
+//  data classes comparing by data they have not by class hash
+//    if (entity1 == entity2) {
+//        println("they are equal")
+//    } else {
+//        println("they are not equal")
+//    }
+
+//  --- deep equality comparing values and class hash
+    val entity1 = Entity.Easy("id", "name")
+    val entity2 = entity1.copy()
+
+    if (entity1 === entity2) {
+        println("they are equal")
+    } else {
+        println("they are not equal")
     }
-
-    println(message)
-
 }
