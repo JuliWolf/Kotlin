@@ -1,0 +1,15 @@
+
+Basic-Types-Documentation
+https://kotlinlang.org/docs/reference/basic-types.html
+
+Operators-in-Kotlin
+https://www.callicoder.com/kotlin-operators/
+
+Control-Flows-Documentation
+https://kotlinlang.org/docs/reference/control-flow.html
+
+Functions-Documentation
+https://kotlinlang.org/docs/reference/functions.html
+
+Null-Safty-Documentation
+https://kotlinlang.org/docs/reference/null-safety.html
