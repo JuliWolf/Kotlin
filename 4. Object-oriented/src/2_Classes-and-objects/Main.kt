@@ -1,6 +1,7 @@
 package `2_Classes-and-objects`
 
 fun main() {
+//  Creating instances of class
   val julia: Person = Person("Julia", "Wolf")
   val john: Person = Person()
   val johnPeterson: Person = Person(lastName = "Peterson")
