@@ -1,0 +1,72 @@
+Concepts
+
+1. Variables and types
+2. Control flows
+3. Functions
+4. Collections
+5. Classes and objects
+
+
+/* ----------------------------------------------------- */
+1. Variables and types
+
+- A variables is a location in memory (storage)
+- To indicate the storage area, each variable should be given a unique name (identifier)
+
+
+fun main () {
+    var age = 15
+
+    println(age) // Output will be 15
+}
+
+
+/* ----------------------------------------------------- */
+2. Control flows
+
+allow
+- to do something conditionally
+- to repeatedly run code (conditionally)
+
+
+fun main () {
+    var age = 17
+
+    if (age >= 21) {
+        println("You may vote now!")
+    }
+}
+
+
+/* ----------------------------------------------------- */
+3. Functions
+
+enable to
+- to separate code
+- to run code blocks when needed
+
+
+fun main () {
+    myFunction()
+}
+
+fun myFunction () {
+    println("my function was called")
+}
+
+
+/* ----------------------------------------------------- */
+4. Collections
+
+enable to
+- store multiple elements in one place
+- iterate through multiple elements (with the help of control flows)
+
+
+/* ----------------------------------------------------- */
+5. Classes and objects
+
+allow to
+- create our own data types
+- keep the data members and methods together in one place
+- write more readable and maintainable code
