@@ -1,5 +1,10 @@
 package `7_Interfaces`
 
+// Interfaces can not have state
+// Interfaces can have method realization
+// It is possible to implement multiple interfaces
+// Not possible to create an instance from Interfaces
+
 interface Drivable {
   val maxSpeed: Double
   fun drive (): String

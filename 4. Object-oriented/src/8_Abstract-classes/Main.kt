@@ -1,5 +1,10 @@
 package `8_Abstract-classes`
 
+// Not possible to create an instance from abstract class
+// Abstract classes can have abstract properties and methods
+// Abstract classes can have method realization
+// It is possible to extends from only one abstract class
+
 
 // An abstract class cannot be instantiated
 // (you cannot create objects of an abstract class).
