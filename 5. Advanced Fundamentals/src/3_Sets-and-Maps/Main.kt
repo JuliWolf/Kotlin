@@ -1,4 +1,4 @@
-package `3_Sets_and_Maps`
+package `3_Sets-and-Maps`
 
 fun main() {
 //  --- SETS ---
