@@ -24,7 +24,7 @@ package `6_Visibility-modifiers`
 // If a member of a class is not specified then it is by default public
 
 
-public class Example {}
+//public class Example {}
 
 // public by default
 class Demo {}
@@ -37,7 +37,7 @@ class Demo {}
 public val x =  5
 
 // public by default
-val y = 10;
+//val y = 10;
 
 
 // --- PRIVATE ---
@@ -51,11 +51,11 @@ val y = 10;
 
 // Tha class "Example" is accessible from the same source file
 // val "x" and "fun doSomething" are accessible within Example class
-private class Example {
-  private val x = 1;
-
-  private fun doSomething(){}
-}
+//private class Example {
+//  private val x = 1;
+//
+//  private fun doSomething(){}
+//}
 
 
 // --- INTERNAL ---
